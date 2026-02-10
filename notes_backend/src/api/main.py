@@ -32,6 +32,14 @@ app.add_middleware(
 )
 
 # Ensure schema exists on startup (idempotent).
+#
+# SQLite DB path:
+# - Controlled by env var SQLITE_DB (recommended when using the database container)
+# - If not set, defaults to: notes_backend/database/myapp.db
+#
+# API docs:
+# - Swagger UI: /docs
+# - OpenAPI JSON: /openapi.json
 init_db()
 
 
